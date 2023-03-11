@@ -6,44 +6,163 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Derek Ngan's Web Developer Portfolio</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/304aeb4f74.js" crossorigin="anonymous"></script>
 </head>
 
 
-<body>
+<body id="body">
     <!-- HEADER / NAVBAR -->
     <header>
-        <div class="darkmode">
-            <button>🌞</button>
-        </div>
         <div class="wrapper">
-            <nav>
+            <nav class="navBar">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <div class="iconContainer" id="icon">
+                        <div class="sun sun-logo" id="sun">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <div class="moon moon-logo" id="moon">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                    </div>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
                 </ul>
             </nav>
         </div>
         <section class="home">
             <div class="wrapper">
-                <h1>Portfolio under construction
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <h1>Derek Ngan
+                    <span>Front-end</span>
+                    <span>Web developer</span>
                 </h1>
             </div>
         </section>
     </header>
     <!-- MAIN SECTION -->
     <main>
-        <div class="wrapper">
-            <section class="aboutMe">
+        <section class="aboutMe">
+            <div class="wrapper">
+                <div class="aboutName">
+                    <h2>About Me</h2>
+                    <p>Derek Ngan</p>
+                </div>
+                <div class="aboutContainer">
+                    <figure class="aboutPic">
+                        <img src="./asset/1563319799996.jpg" alt="">
+                    </figure>
+                    <article class="aboutText">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam illo molestiae aperiam ipsum,
+                            pariatur magnam sed quam. Consectetur ipsum veritatis blanditiis, quasi ad repellat a quia
+                            eos! Sunt, architecto vitae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, aliquid! Incidunt fugit et,
+                            quisquam quibusdam, unde dolorem adipisci nesciunt dolor facere eligendi, minima quos sit
+                            inventore! Nihil soluta exercitationem voluptates!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquam adipisci alias beatae
+                            unde, accusamus sit rem numquam rerum earum tenetur deserunt animi corporis impedit
+                            laboriosam nam debitis officia harum!</p>
+                        <ul class="socials">
+                            <li><a href=""><span><i class="fa-brands fa-github" id="icons"></i></i></span></a></li>
+                            <li><a href=""></a><span><i class="fa-brands fa-linkedin" id="icons"></i></span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-            </section>
-        </div>
+        <!-- SKILLS SECTION -->
+        <section class="skills">
+            <div class="wrapper">
+                <h2>Skills</h2>
+                <ul>
+                    <li>
+                        <span><i class="fa-brands fa-html5"></i></span>
+                        <p>HTML5</p>
+                    </li>
+                    <li>
+                        <span><i class="fa-brands fa-css3-alt"></i></span>
+                        <p>CSS</p>
+                    </li>
+                    <li>
+                        <span><i class="fa-brands fa-square-js"></i></span>
+                        <p>Javascript + ES6</p>
+                    </li>
+                    <li>
+                        <span><i class="fa-brands fa-react"></i></span>
+                        <p>React</p>
+                    </li>
+                    <li>
+                        <span><i class="fa-brands fa-sass"></i></span>
+                        <p>SASS</p>
+                    </li>
+                    <li>
+                        <span><i class="fa-brands fa-git"></i></span>
+                        <p>Git</p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-terminal"></i></span>
+                        <p>Terminal</p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-universal-access"></i></span>
+                        <p>Accessibility</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="projects">
+            <div class="wrapper">
+                <div class="project">
+                    <h2>Projects</h2>
+                </div>
+                <div class="carousel">
+                    <button class="slideBtn next" id="slideNext"></button>
+                    <button class="slideBtn prev" id="slidePrev"></button>
+                    <ul class="slider" id="slider">
+                        <li class="slide" id="slide"><img src="./asset/Screenshot 2023-03-10 at 18-41-44 Quiz App.png"
+                                alt=""></li>
+                        <li class="slide" id="slide"><img
+                                src="./asset/Screenshot 2023-03-10 at 18-40-34 Shoe-Kloset-Home.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact">
+            <div class="wrapper">
+                <h3>Contact Me</h3>
+                <div class="formContainer">
+                    <form action="">
+                        <label for=""></label>
+                        <input type="text">
+                        <label for=""></label>
+                        <input type="text">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <button></button>
+                    </form>
+                    <div class="formText">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, asperiores iusto sed libero provident architecto quos earum veritatis repudiandae sequi nesciunt nemo, debitis nobis tenetur voluptatibus placeat animi nostrum repellendus.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ducimus architecto reiciendis illum ipsam amet expedita totam quam ex placeat temporibus, debitis quasi illo voluptatem aliquid impedit repellat distinctio iusto!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptate porro blanditiis aliquid, laboriosam assumenda autem sunt, quis cum nemo consequuntur est, vitae sequi provident pariatur earum iure voluptas aperiam!</p>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+            <a href=""></a>
+        </section>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
