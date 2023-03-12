@@ -448,18 +448,18 @@ body {
   background-color: #D23800;
 }
 
-.overlay-slide-right {
+.overlay-slide-up {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
-.overlay-slide-left {
+.overlay-slide-down {
   -webkit-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
-  -webkit-transform: translateX(-100vw);
-          transform: translateX(-100vw);
+  -webkit-transform: translateY(-100vw);
+          transform: translateY(-100vw);
 }
 
 .hamburgerMenu {
@@ -494,8 +494,8 @@ body {
 }
 
 .active .menuBarOne {
-  -webkit-transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
-          transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
+  -webkit-transform: rotate(-45deg) translate(-12px, 16px);
+          transform: rotate(-45deg) translate(-12px, 16px);
 }
 
 .active .menuBarTwo {
@@ -503,8 +503,8 @@ body {
 }
 
 .active .menuBarThree {
-  -webkit-transform: rotate(45deg) translate(-0.6rem, -0.8rem);
-          transform: rotate(45deg) translate(-0.6rem, -0.8rem);
+  -webkit-transform: rotate(45deg) translate(-12px, -16px);
+          transform: rotate(45deg) translate(-12px, -16px);
 }
 
 .slide-in-1 {
@@ -513,59 +513,59 @@ body {
 }
 
 .slide-in-2 {
-  -webkit-animation: slide-in 0.4s linear 0.4s both;
-          animation: slide-in 0.4s linear 0.4s both;
+  -webkit-animation: slide-in 0.4s linear 0.2s both;
+          animation: slide-in 0.4s linear 0.2s both;
 }
 
 .slide-in-3 {
-  -webkit-animation: slide-in 0.4s linear 0.6s both;
-          animation: slide-in 0.4s linear 0.6s both;
+  -webkit-animation: slide-in 0.4s linear 0.2s both;
+          animation: slide-in 0.4s linear 0.2s both;
 }
 
 .slide-in-4 {
-  -webkit-animation: slide-in 0.4s linear 0.8s both;
-          animation: slide-in 0.4s linear 0.8s both;
+  -webkit-animation: slide-in 0.4s linear 0.2s both;
+          animation: slide-in 0.4s linear 0.2s both;
 }
 
 .slide-in-5 {
-  -webkit-animation: slide-in 0.4s linear 1s both;
-          animation: slide-in 0.4s linear 1s both;
+  -webkit-animation: slide-in 0.4s linear 0.2s both;
+          animation: slide-in 0.4s linear 0.2s both;
 }
 
 @-webkit-keyframes slide-in {
   from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes slide-in {
   from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 .slide-out-1 {
-  -webkit-animation: slide-out 0.3s linear 0.5s both;
-          animation: slide-out 0.3s linear 0.5s both;
+  -webkit-animation: slide-out 0.3s linear 0.2s both;
+          animation: slide-out 0.3s linear 0.2s both;
 }
 
 .slide-out-2 {
-  -webkit-animation: slide-out 0.3s linear 0.4s both;
-          animation: slide-out 0.3s linear 0.4s both;
+  -webkit-animation: slide-out 0.3s linear 0.2s both;
+          animation: slide-out 0.3s linear 0.2s both;
 }
 
 .slide-out-3 {
-  -webkit-animation: slide-out 0.3s linear 0.3s both;
-          animation: slide-out 0.3s linear 0.3s both;
+  -webkit-animation: slide-out 0.3s linear 0.2s both;
+          animation: slide-out 0.3s linear 0.2s both;
 }
 
 .slide-out-4 {
@@ -574,29 +574,29 @@ body {
 }
 
 .slide-out-5 {
-  -webkit-animation: slide-out 0.3s linear 0.1s both;
-          animation: slide-out 0.3s linear 0.1s both;
+  -webkit-animation: slide-out 0.3s linear 0.2s both;
+          animation: slide-out 0.3s linear 0.2s both;
 }
 
 @-webkit-keyframes slide-out {
   from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
 }
 
 @keyframes slide-out {
   from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
 }
 .home {
@@ -678,6 +678,10 @@ body {
   width: 100%;
 }
 
+.aboutText p {
+  font-size: 1.2rem;
+}
+
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -693,9 +697,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.socials .fa-github {
-  color: #02130a;
-}
 .socials i {
   font-size: 3rem;
   cursor: pointer;
@@ -703,8 +704,7 @@ body {
 }
 .socials i:hover,
 .socials i:focus {
-  -webkit-box-shadow: 0px 5px 0px 0px rgb(254, 108, 11);
-          box-shadow: 0px 5px 0px 0px rgb(254, 108, 11);
+  color: #fe6c0b;
 }
 .socials i.darkmode {
   color: #b6caa2;
@@ -963,6 +963,21 @@ h2 {
   color: #b6caa2;
   background-color: #02130a;
 }
+.formContainer input::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+.formContainer input::-moz-placeholder {
+  text-transform: capitalize;
+}
+.formContainer input:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+.formContainer input::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+.formContainer input::placeholder {
+  text-transform: capitalize;
+}
 .formContainer input.darkmode {
   color: #02130a;
   background-color: #b6caa2;
@@ -971,11 +986,27 @@ h2 {
   margin-top: 20px;
   padding: 10px;
   background-color: #fe6c0b;
+  text-transform: uppercase;
 }
 .formContainer textarea {
   resize: none;
   background-color: #02130a;
   color: #b6caa2;
+}
+.formContainer textarea::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+.formContainer textarea::-moz-placeholder {
+  text-transform: capitalize;
+}
+.formContainer textarea:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+.formContainer textarea::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+.formContainer textarea::placeholder {
+  text-transform: capitalize;
 }
 .formContainer textarea.darkmode {
   color: #02130a;
@@ -988,4 +1019,9 @@ h2 {
 }
 .formText p {
   margin-top: 0;
+  font-size: 1.2rem;
+}
+.formText a:hover,
+.formText a:focus {
+  color: #fe6c0b;
 }

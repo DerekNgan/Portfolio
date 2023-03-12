@@ -117,8 +117,8 @@ body{
 // }
 
 // Hamburger
-// Animations inspired by https://codepen.io/krishandeep/pen/oNoXMwE
 
+//Animations inspired by https://codepen.io/krishandeep/pen/oNoXMwE
 .navBar ul{
     height: 100vh;
     padding-top: 100px;
@@ -149,14 +149,14 @@ body{
     background-color: $overlay-color;
   }
   
-  .overlay-slide-right {
+  .overlay-slide-up {
     transition: all 0.4s ease-in-out;
-    transform: translateX(0);
+    transform: translateY(0);
   }
   
-  .overlay-slide-left {
+  .overlay-slide-down {
     transition: all 0.8s ease-in-out;
-    transform: translateX(-100vw);
+    transform: translateY(-100vw);
   }
 
 .hamburgerMenu{
@@ -188,7 +188,7 @@ body{
 }
 
 .active .menuBarOne{
-    transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
+    transform: rotate(-45deg) translate(-12px, 16px);
 }
 
 .active .menuBarTwo{
@@ -196,7 +196,7 @@ body{
 }
 
 .active .menuBarThree{
-    transform: rotate(45deg) translate(-0.6rem, -0.8rem);
+    transform: rotate(45deg) translate(-12px, -16px);
 }
 
 //   slide in
@@ -206,42 +206,42 @@ body{
   }
   
   .slide-in-2 {
-    animation: slide-in 0.4s linear 0.4s both;
+    animation: slide-in 0.4s linear 0.2s both;
   }
   
   .slide-in-3 {
-    animation: slide-in 0.4s linear 0.6s both;
+    animation: slide-in 0.4s linear 0.2s both;
   }
   
   .slide-in-4 {
-    animation: slide-in 0.4s linear 0.8s both;
+    animation: slide-in 0.4s linear 0.2s both;
   }
   
   .slide-in-5 {
-    animation: slide-in 0.4s linear 1s both;
+    animation: slide-in 0.4s linear 0.2s both;
   }
   
   @keyframes slide-in {
     from {
-      transform: translateX(-100%);
+      transform: translateY(-100%);
     }
     to {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
 //   slide out
 
 .slide-out-1 {
-    animation: slide-out 0.3s linear 0.5s both;
+    animation: slide-out 0.3s linear 0.2s both;
   }
   
   .slide-out-2 {
-    animation: slide-out 0.3s linear 0.4s both;
+    animation: slide-out 0.3s linear 0.2s both;
   }
   
   .slide-out-3 {
-    animation: slide-out 0.3s linear 0.3s both;
+    animation: slide-out 0.3s linear 0.2s both;
   }
   
   .slide-out-4 {
@@ -249,15 +249,15 @@ body{
   }
   
   .slide-out-5 {
-    animation: slide-out 0.3s linear 0.1s both;
+    animation: slide-out 0.3s linear 0.2s both;
   }
   
   @keyframes slide-out {
     from {
-      transform: translateX(0);
+      transform: translateY(0);
     }
     to {
-      transform: translateX(-100%);
+      transform: translateY(-100%);
     }
   }
 
@@ -320,15 +320,15 @@ body{
     }
 }
 
+.aboutText p{
+        font-size: 1.2rem;
+}
+
 .socials{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
-    .fa-github{
-        color: $dark-color;
-    }
 
     i{
         font-size: 3rem;
@@ -338,7 +338,7 @@ body{
 
     i:hover,
     i:focus{
-        box-shadow: $box-shadow;
+        color: $underline-color;
     }
 
     i.darkmode{
@@ -531,6 +531,10 @@ body{
         background-color: $dark-color;
     }
 
+    input::placeholder{
+        text-transform: capitalize;
+    }
+
     input.darkmode{
         color: $dark-color;
         background-color: $light-color;
@@ -540,12 +544,17 @@ body{
         margin-top: 20px;
         padding: 10px;
         background-color: $underline-color;
+        text-transform: uppercase;
     }
 
     textarea{
         resize: none;
         background-color: $dark-color;
         color: $light-color;
+    }
+
+    textarea::placeholder{
+        text-transform: capitalize;
     }
 
     textarea.darkmode{
@@ -555,15 +564,18 @@ body{
 
 }
 
-
-
-
 .formText{
     width: 50%;
     margin-left: 50px;
 
     p{
         margin-top: 0;
+        font-size: 1.2rem;
+    }
+
+    a:hover,
+    a:focus{
+        color: $underline-color;
     }
 }
 

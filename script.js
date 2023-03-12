@@ -3,7 +3,6 @@ const containerEl = document.getElementById('icon');
 const sunEl = document.getElementById('sun');
 const moonEl = document.getElementById('moon');
 const bodyEl = document.getElementById('body');
-const iconEl = document.getElementById('icons');
 const inputNameEl = document.getElementById('name');
 const inputEmailEl = document.getElementById('email');
 const textAreaEl = document.getElementById('message');
@@ -33,7 +32,6 @@ containerEl.addEventListener('click', function(){
     sunEl.classList.toggle('animate-sun');
     moonEl.classList.toggle('animate-moon');
     bodyEl.classList.toggle('darkmode');
-    iconEl.classList.toggle('darkmode');
     inputNameEl.classList.toggle('darkmode');
     inputEmailEl.classList.toggle('darkmode');
     textAreaEl.classList.toggle('darkmode');
@@ -68,13 +66,13 @@ function navAnimation(val1, val2) {
   
     if (overlay.classList.contains("overlay-active")) {
       // Animate In - Overlay
-      overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
+      overlay.classList.replace("overlay-slide-down", "overlay-slide-up");
   
       // Animate In - Nav Items
       navAnimation("out", "in");
     } else {
       // Animate Out - Overlay
-      overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
+      overlay.classList.replace("overlay-slide-up", "overlay-slide-down");
   
       // Animate Out - Nav Items
       navAnimation("in", "out");
