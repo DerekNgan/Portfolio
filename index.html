@@ -18,35 +18,45 @@
     <!-- HEADER / NAVBAR -->
     <header>
         <div class="wrapper">
-            <nav class="navBar">
-                <ul>
-                    <div class="iconContainer" id="icon">
-                        <div class="sun sun-logo" id="sun">
-                            <i class="fa-solid fa-sun"></i>
-                        </div>
-                        <div class="moon moon-logo" id="moon">
-                            <i class="fa-solid fa-moon"></i>
-                        </div>
-                    </div>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
+            <div class="iconContainer" id="icon">
+                <div class="moon moon-logo" id="moon">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="sun sun-logo" id="sun">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+                <p><i class="fa-solid fa-arrow-up"></i>click🙂</p>
+            </div>
+            <div class="overlay overlay-slide-left" id="overlay">
+                <nav class="navBar">
+                    <ul>
+                        <li class="slide-out-1" id="navOne"><a href="#home">Home</a></li>
+                        <li class="slide-out-2" id="navTwo"><a href="#about">About</a></li>
+                        <li class="slide-out-3" id="navThree"><a href="#skills">Skills</a></li>
+                        <li class="slide-out-4" id="navFour"><a href="#projects">Projects</a></li>
+                        <li class="slide-out-5" id="navFive"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <section class="home">
+        <div class="hamburgerMenu" id="hamburgerMenu">
+            <div class="menuBarOne" id="burgerBarOne"></div>
+            <div class="menuBarTwo" id="burgerBarTwo"></div>
+            <div class="menuBarThree" id="burgerBarThree"></div>
+        </div>
+        <section class="home" id="home">
             <div class="wrapper">
-                <h1>Derek Ngan
+                <div class="animationContainer">
+                    <h1 class="nameAnimation">Derek Ngan</h1>
                     <span>Front-end</span>
                     <span>Web developer</span>
-                </h1>
+                </div>
             </div>
         </section>
     </header>
     <!-- MAIN SECTION -->
     <main>
-        <section class="aboutMe">
+        <section class="aboutMe" id="about">
             <div class="wrapper">
                 <div class="aboutName">
                     <h2>About Me</h2>
@@ -76,9 +86,11 @@
         </section>
 
         <!-- SKILLS SECTION -->
-        <section class="skills">
+        <section class="skills" id="skills">
             <div class="wrapper">
-                <h2>Skills</h2>
+                <div class="skillsContainer">
+                    <h2>Skills</h2>
+                </div>
                 <ul>
                     <li>
                         <span><i class="fa-brands fa-html5"></i></span>
@@ -117,41 +129,52 @@
         </section>
 
         <!-- PROJECTS SECTION -->
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="wrapper">
                 <div class="project">
                     <h2>Projects</h2>
                 </div>
                 <div class="carousel">
-                    <button class="slideBtn next" id="slideNext"></button>
-                    <button class="slideBtn prev" id="slidePrev"></button>
+                    <div class="buttonContainer">
+                        <button class="slideBtn next" id="slideNext"></button>
+                        <button class="slideBtn prev" id="slidePrev"></button>
+                    </div>
                     <ul class="slider" id="slider">
                         <li class="slide" id="slide"><img src="./asset/Screenshot 2023-03-10 at 18-41-44 Quiz App.png"
-                                alt=""></li>
+                                alt=""><h3>Random quiz game</h3><p>A random quiz app created with HTML, CSS and vanilla Javascript to generate random questions and answers while displaying a timer</p><span><i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i><i class="fa-brands fa-square-js"></i></span></li>
                         <li class="slide" id="slide"><img
-                                src="./asset/Screenshot 2023-03-10 at 18-40-34 Shoe-Kloset-Home.png" alt=""></li>
+                                src="./asset/Screenshot 2023-03-10 at 18-40-34 Shoe-Kloset-Home.png" alt=""><h3>Shoe Kloset</h3><p>A responsive webpage design created per the client's direction using HTML and CSS</p><span><i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i></li</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- CONTACT SECTION -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="wrapper">
-                <h3>Contact Me</h3>
+                <div class="contactContainer">
+                    <h3>Contact Me</h3>
+                </div>
                 <div class="formContainer">
-                    <form action="">
-                        <label for=""></label>
-                        <input type="text">
-                        <label for=""></label>
-                        <input type="text">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <button></button>
+                    <form id="form" action="">
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" id="name" placeholder="your name" required>
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" placeholder="your email" required>
+                        <textarea name="message" id="message" cols="50" rows="6"
+                            placeholder="Anything you'd like to share with me" wrap="hard" required></textarea>
+                        <button id="submitBtn">submit</button>
                     </form>
                     <div class="formText">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, asperiores iusto sed libero provident architecto quos earum veritatis repudiandae sequi nesciunt nemo, debitis nobis tenetur voluptatibus placeat animi nostrum repellendus.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ducimus architecto reiciendis illum ipsam amet expedita totam quam ex placeat temporibus, debitis quasi illo voluptatem aliquid impedit repellat distinctio iusto!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptate porro blanditiis aliquid, laboriosam assumenda autem sunt, quis cum nemo consequuntur est, vitae sequi provident pariatur earum iure voluptas aperiam!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, asperiores iusto sed libero
+                            provident architecto quos earum veritatis repudiandae sequi nesciunt nemo, debitis nobis
+                            tenetur voluptatibus placeat animi nostrum repellendus.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ducimus architecto reiciendis
+                            illum ipsam amet expedita totam quam ex placeat temporibus, debitis quasi illo voluptatem
+                            aliquid impedit repellat distinctio iusto!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptate porro
+                            blanditiis aliquid, laboriosam assumenda autem sunt, quis cum nemo consequuntur est, vitae
+                            sequi provident pariatur earum iure voluptas aperiam!</p>
                     </div>
                 </div>
             </div>

@@ -3,20 +3,79 @@
 @use './global';
 
 body{
-    background-color: $dark-color;
-    color: $light-color;
+    background-color: $light-color;
+    color: $dark-color;
     font-family: $base-font;
     transition: 1s;
 }
 
+// HOME ANIMATIONS
+// Inspired by https://codepen.io/chriiss/pen/KKebVYO
+.nameAnimation{
+    width: 13ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid $underline-color;
+    animation: cursor 1s step-start, text 2s steps(13) alternate infinite;
+
+    @keyframes cursor {
+        0%{
+            border-color: $underline-color;
+        }
+        
+        100%{
+            border-color: $underline-color;
+        }
+    }
+
+    @keyframes text {
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 12ch;
+        }
+    }
+}
+
 // dark mode button styling / animations
-.lightmode{
-    background-color: $light-color;
-    color: $dark-color;
+// Animations inspired by https://dev.to/murtuzaalisurti/dark-mode-toggle-animation-using-css-27il
+
+.darkmode{
+    background-color: $dark-color;
+    color: $light-color;
 }
 
 .iconContainer{
     position: relative;
+    width: fit-content;
+    margin-top: 30px;
+
+    p{
+        display: flex;
+        flex-direction:column;
+        font-size: 1rem;
+        text-align: center;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+        animation-name: bounce;
+        animation-timing-function: ease;
+        
+        i{
+            font-size: 2rem;
+        }
+    }
+    @keyframes bounce{
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-10px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
 }
 
 .sun, .moon{
@@ -52,19 +111,156 @@ body{
     transform: translateY(0%) rotateZ(0deg);
 }
 
-//NAV BAR 
-ul{
+//   .slide-in-2,
+//   .slide-in-4{
+//     background-color: $underline-color;
+// }
+
+// Hamburger
+// Animations inspired by https://codepen.io/krishandeep/pen/oNoXMwE
+
+.navBar ul{
+    height: 100vh;
+    padding-top: 100px;
+    padding-left: 0px;
+}
+
+.navBar li{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 15%;
+    font-size: 2rem;
 
-    li{
-        font-size: 1.2rem;
-        padding-left: 25px;
+    a:hover,
+    a:focus{
+        box-shadow: $overlay-box-shadow;
     }
 }
+
+.overlay {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $overlay-color;
+  }
+  
+  .overlay-slide-right {
+    transition: all 0.4s ease-in-out;
+    transform: translateX(0);
+  }
+  
+  .overlay-slide-left {
+    transition: all 0.8s ease-in-out;
+    transform: translateX(-100vw);
+  }
+
+.hamburgerMenu{
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.menuBarOne,
+.menuBarTwo,
+.menuBarThree{
+    width: 3.5rem;
+    height: 0.2rem;
+    background-color: $dark-color;
+    margin: 0.8rem 0;
+    transition: 0.4s;
+}
+
+.menuBarOne.darkmode{
+    background-color: $light-color;
+}
+.menuBarTwo.darkmode{
+    background-color: $light-color;
+}
+.menuBarThree.darkmode{
+    background-color: $light-color;
+}
+
+.active .menuBarOne{
+    transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
+}
+
+.active .menuBarTwo{
+    opacity: 0;
+}
+
+.active .menuBarThree{
+    transform: rotate(45deg) translate(-0.6rem, -0.8rem);
+}
+
+//   slide in
+
+  .slide-in-1 {
+    animation: slide-in 0.4s linear 0.2s both;
+  }
+  
+  .slide-in-2 {
+    animation: slide-in 0.4s linear 0.4s both;
+  }
+  
+  .slide-in-3 {
+    animation: slide-in 0.4s linear 0.6s both;
+  }
+  
+  .slide-in-4 {
+    animation: slide-in 0.4s linear 0.8s both;
+  }
+  
+  .slide-in-5 {
+    animation: slide-in 0.4s linear 1s both;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+//   slide out
+
+.slide-out-1 {
+    animation: slide-out 0.3s linear 0.5s both;
+  }
+  
+  .slide-out-2 {
+    animation: slide-out 0.3s linear 0.4s both;
+  }
+  
+  .slide-out-3 {
+    animation: slide-out 0.3s linear 0.3s both;
+  }
+  
+  .slide-out-4 {
+    animation: slide-out 0.3s linear 0.2s both;
+  }
+  
+  .slide-out-5 {
+    animation: slide-out 0.3s linear 0.1s both;
+  }
+  
+  @keyframes slide-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
 // HOME 
 .home{
     min-height: 90vh;
@@ -73,13 +269,24 @@ ul{
     justify-content: center;
     align-items: center;
 
-    h1{
+    .animationContainer{
         display: flex;
         flex-direction: column;
+    }
+
+    h1{
         font-size: 4rem;
         font-weight: 800;
         text-transform: uppercase;
+        margin: 0;
     }
+
+    span{
+        font-size: 4rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    };
+
 }
 
 // ABOUT
@@ -95,7 +302,7 @@ ul{
 
     h2{
         margin-bottom: 0;
-        box-shadow: 0px 10px 0px 0px rgba(254, 108, 11, 1);
+        box-shadow: $box-shadow;
         font-size: 2rem;
     }
 
@@ -120,30 +327,40 @@ ul{
     align-items: center;
 
     .fa-github{
-        color: $light-color;
+        color: $dark-color;
     }
 
     i{
         font-size: 3rem;
         cursor: pointer;
+        margin-right: 20px;
     }
 
-    i.lightmode{
-        color: $dark-color;
+    i:hover,
+    i:focus{
+        box-shadow: $box-shadow;
+    }
+
+    i.darkmode{
+        color: $light-color;
     }
 }
 
 // SKILLS
 
-.skills{
+    .skillsContainer{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
 
     h2{
-    display: flex;
-    justify-content: center;
     margin: 100px 0 50px 0;
     font-size: 2.5rem;
+    box-shadow: $box-shadow;
+    width: fit-content;
     }
-}
+
 
 
 .skills ul {
@@ -162,6 +379,11 @@ ul{
         align-items: center;
     }
 
+    li:hover,
+    li:focus{
+        color: $underline-color;
+    }
+
     span{
         font-size: 4rem;
     }
@@ -172,15 +394,31 @@ ul{
 }
 
 // PROJECTS
+
+.projects{
+    margin-bottom: 100px;
+
 .project{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 
     h2{
         font-size: 2.5rem;
+        box-shadow: $box-shadow;
     }
+}
+
+.slide i{
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.slide i:hover,
+       i:focus{
+    color: $underline-color;
 }
 
 .carousel{
@@ -198,6 +436,7 @@ ul{
     padding: 0;
     overflow: scroll;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .slide {
@@ -206,22 +445,43 @@ ul{
     flex: 1 0 100%;
   }
   
+.buttonContainer{
+    display: flex;
+}
 
 .slideBtn{
     position: absolute;
-    display: flex;
     top: 0;
-    bottom: 0;
+    bottom: 100px;
     margin: auto;
-    height: 4rem;
-    background-color: white;
+    height: 75px;
+    background-color: $underline-color;
     border: none;
-    width: 2rem;
-    font-size: 3rem;
+    width: 40px;
     padding: 0;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 1;
     transition: opacity 100ms;
+    transform: scale(1);
+    animation: pulse 1s infinite;
+    box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 1);;
+
+    @keyframes pulse{
+        0%{
+            transform: scale(1);
+            box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0.7);
+        }
+
+        70%{
+            transform: scale(1);
+            box-shadow: 0px 0px 0px 20px rgba(254, 108, 11, 0);
+        }
+
+        100%{
+            transform: scale(1);
+            box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0);
+        }
+    }
 }
 
 .slideBtn:hover{
@@ -239,15 +499,19 @@ ul{
     padding-left: 0.25rem;
     border-radius: 0 2rem 2rem 0;  
 }
-
+}
 // Contact 
 
-.contact h3{
+.contactContainer{
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    flex-direction: row;
+}
+
+.contact h3{
     font-size: 2.5rem;
+    width: fit-content;
+    box-shadow: $box-shadow;
 }
 
 .formContainer{
@@ -259,9 +523,47 @@ ul{
         flex-direction: column;
         width: 50%;
     }
+
+    input{
+        height: 40px;
+        margin-bottom: 20px;
+        color: $light-color;
+        background-color: $dark-color;
+    }
+
+    input.darkmode{
+        color: $dark-color;
+        background-color: $light-color;
+    }
+
+    button{
+        margin-top: 20px;
+        padding: 10px;
+        background-color: $underline-color;
+    }
+
+    textarea{
+        resize: none;
+        background-color: $dark-color;
+        color: $light-color;
+    }
+
+    textarea.darkmode{
+        color: $dark-color;
+        background-color: $light-color ;
+    }
+
 }
+
+
+
 
 .formText{
     width: 50%;
+    margin-left: 50px;
+
+    p{
+        margin-top: 0;
+    }
 }
 

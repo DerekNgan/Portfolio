@@ -2,6 +2,17 @@ ul{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+textarea,
+button{
+    border: none;
+}
+
 .wrapper{
     max-width: 1280px;
     margin: 0 auto;
