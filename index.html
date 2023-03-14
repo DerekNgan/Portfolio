@@ -150,12 +150,11 @@
                     <h3>Contact Me</h3>
                 </div>
                 <div class="formContainer">
-                    <form id="form" action="" method="POST" data-netlify="true" name="contactInfo">
-                        <input type="hidden" name="subject">
+                    <form id="form" action="https://formspree.io/f/mdovdwdb" method="POST" name="contactInfo">
                         <label for="name" class="sr-only" name="name">Name</label>
-                        <input type="text" id="name" placeholder="your name" required>
+                        <input type="text" id="name" placeholder="your name" name="name"required>
                         <label for="email" class="sr-only" name="email" >Email</label>
-                        <input type="email" id="email" placeholder="your email" required>
+                        <input type="email" id="email" placeholder="your email" name="email" required>
                         <textarea name="message" id="message" cols="50" rows="6"
                             placeholder="Anything you'd like to share with me" wrap="hard" required></textarea>
                         <button type="submit" id="submitBtn">submit</button>
