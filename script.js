@@ -12,10 +12,7 @@ const burgerBarThreeEl = document.getElementById('burgerBarThree');
 
 
 // button variables
-const sliderEl = document.getElementById('slider');
-const slideEl = document.getElementById('slide');
-const nextEl = document.getElementById('slideNext');
-const prevEl = document.getElementById('slidePrev');
+
 
 // hamburger variables
 const hamburgerMenu = document.getElementById("hamburgerMenu");
@@ -41,15 +38,40 @@ containerEl.addEventListener('click', function(){
 });
 
 // carousel function
-nextEl.addEventListener('click', () => {
-    const slideWidth = slideEl.clientWidth;
-    sliderEl.scrollLeft += slideWidth;
-});
+const index = document.getElementsByClassName('image');
+const length = index.length;
+let slide = 0;
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
 
-prevEl.addEventListener('click', () => {
-    const slideWidth = slideEl.clientWidth;
-    sliderEl.scrollLeft -= slideWidth;
-});
+for (let i = 1; i < index.length; i++){
+  index[i].style.display = 'none';
+}
+
+nextBtn.addEventListener('click', function(){
+  if(slide == length-1){
+    index[0].style.display = 'block';
+    index[slide].style.display = 'none';
+    slide = 0;
+  } else {
+    index[slide+1].style.display = 'block';
+    index[slide].style.display = 'none';
+    slide++;
+  }
+})
+
+prevBtn.addEventListener('click', function(){
+  if(slide <= 0) {
+    index[slide].style.display = 'none';
+    slide = length;
+    slide--;
+    index[slide].style.display = 'block';
+  } else {
+    index[slide].style.display = 'none';
+    slide--;
+    index[slide].style.display = 'block';
+  }
+})
 
 // Hamburger animation functions
 function navAnimation(val1, val2) {

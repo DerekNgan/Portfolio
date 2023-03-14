@@ -266,24 +266,24 @@ body {
   width: 13ch;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 4px solid #fe6c0b;
+  border-right: 4px solid rgb(254, 108, 11);
   -webkit-animation: cursor 1s step-start, text 2s steps(13) alternate infinite;
           animation: cursor 1s step-start, text 2s steps(13) alternate infinite;
 }
 @-webkit-keyframes cursor {
   0% {
-    border-color: #fe6c0b;
+    border-color: rgb(254, 108, 11);
   }
   100% {
-    border-color: #fe6c0b;
+    border-color: rgb(254, 108, 11);
   }
 }
 @keyframes cursor {
   0% {
-    border-color: #fe6c0b;
+    border-color: rgb(254, 108, 11);
   }
   100% {
-    border-color: #fe6c0b;
+    border-color: rgb(254, 108, 11);
   }
 }
 @-webkit-keyframes text {
@@ -445,7 +445,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #D23800;
+  background-color: #d34714;
 }
 
 .overlay-slide-up {
@@ -458,8 +458,8 @@ body {
 .overlay-slide-down {
   -webkit-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
-  -webkit-transform: translateY(-100vw);
-          transform: translateY(-100vw);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .hamburgerMenu {
@@ -704,7 +704,7 @@ body {
 }
 .socials i:hover,
 .socials i:focus {
-  color: #fe6c0b;
+  color: rgb(254, 108, 11);
 }
 .socials i.darkmode {
   color: #b6caa2;
@@ -770,7 +770,7 @@ h2 {
 }
 .skills ul li:hover,
 .skills ul li:focus {
-  color: #fe6c0b;
+  color: rgb(254, 108, 11);
 }
 .skills ul span {
   font-size: 4rem;
@@ -809,111 +809,80 @@ h2 {
 }
 .projects .slide i:hover,
 .projects i:focus {
-  color: #fe6c0b;
+  color: rgb(254, 108, 11);
 }
-.projects .carousel {
-  margin: 1rem;
+.projects .projectsContainer {
   position: relative;
-  overflow: hidden;
 }
-.projects .slider {
-  height: auto;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
+.projects .projectsContainer .next {
+  right: 0;
 }
-.projects .slide {
-  width: 100%;
-  height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-}
-.projects .buttonContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.projects .slideBtn {
-  position: absolute;
-  top: 0;
-  bottom: 100px;
-  margin: auto;
-  height: 75px;
-  background-color: #fe6c0b;
+.projects button {
+  background: none;
   border: none;
-  width: 40px;
-  padding: 0;
-  cursor: pointer;
+}
+.projects button:active, .projects button:focus {
+  outline: none;
+}
+.projects .next, .projects .prev {
+  position: absolute;
+  font-size: 4rem;
+  color: rgb(254, 108, 11);
   opacity: 1;
-  -webkit-transition: opacity 100ms;
-  transition: opacity 100ms;
+  -webkit-box-shadow: 0 0 0 0 rgb(254, 108, 11);
+          box-shadow: 0 0 0 0 rgb(254, 108, 11);
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-animation: pulse 1s infinite;
-          animation: pulse 1s infinite;
-  -webkit-box-shadow: 0px 0px 0px 0px rgb(254, 108, 11);
-          box-shadow: 0px 0px 0px 0px rgb(254, 108, 11);
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+  border-radius: 25%;
+  top: 45%;
 }
 @-webkit-keyframes pulse {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0.7);
-            box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0.7);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(254, 108, 11, 0.7);
+            box-shadow: 0 0 0 0 rgba(254, 108, 11, 0.7);
   }
   70% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-box-shadow: 0px 0px 0px 20px rgba(254, 108, 11, 0);
-            box-shadow: 0px 0px 0px 20px rgba(254, 108, 11, 0);
+    -webkit-box-shadow: 0 0 0 10px rgba(254, 108, 11, 0);
+            box-shadow: 0 0 0 10px rgba(254, 108, 11, 0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0);
-            box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(254, 108, 11, 0);
+            box-shadow: 0 0 0 0 rgba(254, 108, 11, 0);
   }
 }
 @keyframes pulse {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0.7);
-            box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0.7);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(254, 108, 11, 0.7);
+            box-shadow: 0 0 0 0 rgba(254, 108, 11, 0.7);
   }
   70% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-box-shadow: 0px 0px 0px 20px rgba(254, 108, 11, 0);
-            box-shadow: 0px 0px 0px 20px rgba(254, 108, 11, 0);
+    -webkit-box-shadow: 0 0 0 10px rgba(254, 108, 11, 0);
+            box-shadow: 0 0 0 10px rgba(254, 108, 11, 0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0);
-            box-shadow: 0px 0px 0px 0px rgba(254, 108, 11, 0);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(254, 108, 11, 0);
+            box-shadow: 0 0 0 0 rgba(254, 108, 11, 0);
   }
 }
-.projects .slideBtn:hover {
-  opacity: 1;
-}
-.projects .slideBtn.next {
-  right: 0;
-  padding-left: 0.75rem;
-  border-radius: 2rem 0 0 2rem;
-}
-.projects .slideBtn.prev {
-  left: 0;
-  padding-left: 0.25rem;
-  border-radius: 0 2rem 2rem 0;
+.projects .next .image, .projects .prev .image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .contactContainer {
@@ -985,7 +954,7 @@ h2 {
 .formContainer button {
   margin-top: 20px;
   padding: 10px;
-  background-color: #fe6c0b;
+  background-color: rgb(254, 108, 11);
   text-transform: uppercase;
 }
 .formContainer textarea {
@@ -1023,5 +992,5 @@ h2 {
 }
 .formText a:hover,
 .formText a:focus {
-  color: #fe6c0b;
+  color: rgb(254, 108, 11);
 }
