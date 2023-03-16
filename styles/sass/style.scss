@@ -1,6 +1,8 @@
 @use './setup';
 @use './variables' as *;
 @use './global';
+@use './mediaqueries';
+@use './animations';
 
 body{
     background-color: $light-color;
@@ -357,7 +359,7 @@ body{
 
 
 
-.skills ul {
+.skillList{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -460,18 +462,24 @@ button:active, button:focus{
     }
 }
 
-
-
 .image{
     display: block;
     width: 100%;
     height: 100%;
     overflow: hidden;
+}}
 }
 
+.image a{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
 
-}
-}
+.image a:hover,
+       a:focus{
+        color: $underline-color;
+       }
 
 .image i {
     font-size: 2rem;

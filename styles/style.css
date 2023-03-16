@@ -254,6 +254,87 @@ button {
   width: 90%;
 }
 
+@media (max-width: 810px) {
+  .aboutMe .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutContainer .aboutPic {
+    width: auto;
+  }
+  .aboutText {
+    text-align: center;
+  }
+  .aboutText .socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0;
+  }
+  .projects .projectsContainer .next,
+  .projects .projectsContainer .prev {
+    font-size: 3rem;
+    top: 25%;
+  }
+  .contact .formText p {
+    font-size: 0.85rem;
+  }
+  .formText a {
+    font-weight: 700;
+  }
+  .socials li i {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 501px) {
+  .home .animationContainer h1 {
+    font-size: 2.5rem;
+  }
+  .home .animationContainer span {
+    font-size: 2.5rem;
+  }
+  .skills .skillList {
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .image {
+    text-align: center;
+  }
+  .projectsContainer .buttonContainer .next,
+  .projectsContainer .buttonContainer .prev {
+    font-size: 2.5rem;
+    top: 20%;
+  }
+  .contact .formContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 100%;
+  }
+  .contact .formContainer .formText {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+  .contact .formContainer .formText .socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0;
+  }
+  .contact .formContainer form {
+    width: 100%;
+  }
+}
 body {
   background-color: #b6caa2;
   color: #02130a;
@@ -733,7 +814,7 @@ h2 {
   width: fit-content;
 }
 
-.skills ul {
+.skillList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -751,7 +832,7 @@ h2 {
       flex-wrap: wrap;
   height: auto;
 }
-.skills ul li {
+.skillList li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -768,14 +849,14 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
 }
-.skills ul li:hover,
-.skills ul li:focus {
+.skillList li:hover,
+.skillList li:focus {
   color: rgb(254, 108, 11);
 }
-.skills ul span {
+.skillList span {
   font-size: 4rem;
 }
-.skills ul p {
+.skillList p {
   text-align: left;
 }
 
@@ -883,6 +964,17 @@ h2 {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.image a {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.image a:hover,
+a:focus {
+  color: rgb(254, 108, 11);
 }
 
 .image i {

@@ -1,0 +1,80 @@
+@media (max-width: 810px){
+    .aboutMe .aboutContainer{
+        flex-direction: column;
+    }
+
+    .aboutContainer .aboutPic{
+        width: auto;
+    }
+
+    .aboutText{
+        text-align: center;
+    }
+
+    .aboutText .socials{
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .projects .projectsContainer .next,
+    .projects .projectsContainer .prev{
+        font-size: 3rem;
+        top: 25%;
+    }
+
+    .contact .formText p{
+        font-size: 0.85rem;
+    }
+
+    .formText a{
+        font-weight: 700;
+    }
+
+    .socials li i{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 501px){
+    .home .animationContainer h1{
+        font-size: 2.5rem;
+    }
+    .home .animationContainer span{
+        font-size: 2.5rem;
+    }
+
+    .skills .skillList{
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects .image{
+        text-align: center;
+    }
+
+    .projectsContainer .buttonContainer .next,
+    .projectsContainer .buttonContainer .prev{
+        font-size: 2.5rem;
+        top: 20%;
+    }
+
+    .contact .formContainer{
+        flex-direction: column-reverse;
+        width: 100%;
+
+        .formText{
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+        }
+
+        .formText .socials{
+            justify-content: center;
+            padding-left: 0;
+        }
+    }
+    .contact .formContainer form{
+        width: 100%;
+    }
+}
