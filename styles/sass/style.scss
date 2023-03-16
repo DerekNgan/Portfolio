@@ -441,7 +441,7 @@ button:active, button:focus{
 	transform: scale(1);
 	animation: pulse 2s infinite;
     border-radius: 25%;
-    top: 45%;
+    top: 35%;
 
     @keyframes pulse{
         0% {
@@ -468,8 +468,21 @@ button:active, button:focus{
     height: 100%;
     overflow: hidden;
 }
+
+
 }
 }
+
+.image i {
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.image i:hover,
+       i:focus{
+    color: $underline-color;
+}
+
 // Contact 
 
 .contactContainer{
