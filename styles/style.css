@@ -546,7 +546,7 @@ body {
 .hamburgerMenu {
   position: fixed;
   top: 1rem;
-  right: 2rem;
+  right: 17%;
   z-index: 10;
   cursor: pointer;
   background-color: #b6caa2;
@@ -554,6 +554,11 @@ body {
 
 .hamburgerMenu.darkmode {
   background-color: #02130a;
+}
+
+.hamburgerMenu:hover,
+.hamburgerMenu:focus {
+  background-color: rgb(254, 108, 11);
 }
 
 .menuBarOne,
