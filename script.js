@@ -38,6 +38,7 @@ containerEl.addEventListener('click', function(){
     burgerBarThreeEl.classList.toggle('darkmode');
     footerP.classList.toggle('darkmode');
     footerEl.classList.toggle('darkmode');
+    hamburgerMenu.classList.toggle('darkmode');
 });
 
 // carousel function
