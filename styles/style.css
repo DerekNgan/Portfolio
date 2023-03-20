@@ -858,6 +858,7 @@ h2 {
 }
 .skillList p {
   text-align: left;
+  text-transform: uppercase;
 }
 
 .projects {
@@ -1033,6 +1034,7 @@ i:focus {
   margin-bottom: 20px;
   color: #b6caa2;
   background-color: #02130a;
+  padding-left: 10px;
 }
 .formContainer input::-webkit-input-placeholder {
   text-transform: capitalize;
@@ -1063,6 +1065,7 @@ i:focus {
   resize: none;
   background-color: #02130a;
   color: #b6caa2;
+  padding-left: 10px;
 }
 .formContainer textarea::-webkit-input-placeholder {
   text-transform: capitalize;
@@ -1095,4 +1098,24 @@ i:focus {
 .formText a:hover,
 .formText a:focus {
   color: rgb(254, 108, 11);
+}
+
+footer {
+  padding: 10px 0 10px 0;
+  background-color: #02130a;
+}
+
+footer.darkmode {
+  background-color: #b6caa2;
+}
+
+.footerP {
+  margin: 0 auto;
+  text-align: center;
+  color: #b6caa2;
+}
+
+.footerP.darkmode {
+  color: #02130a;
+  background-color: #b6caa2;
 }

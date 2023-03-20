@@ -9,9 +9,7 @@ const textAreaEl = document.getElementById('message');
 const burgerBarOneEl = document.getElementById('burgerBarOne');
 const burgerBarTwoEl = document.getElementById('burgerBarTwo');
 const burgerBarThreeEl = document.getElementById('burgerBarThree');
-
-
-// button variables
+const footerEl = document.getElementById('footer');
 
 
 // hamburger variables
@@ -24,6 +22,9 @@ const nav4 = document.getElementById("navFour");
 const nav5 = document.getElementById("navFive");
 const navItems = [nav1, nav2, nav3, nav4, nav5];
 
+// footer variable
+const footerP = document.getElementById('footerP');
+
 // darkmode function
 containerEl.addEventListener('click', function(){
     sunEl.classList.toggle('animate-sun');
@@ -35,6 +36,8 @@ containerEl.addEventListener('click', function(){
     burgerBarOneEl.classList.toggle('darkmode');
     burgerBarTwoEl.classList.toggle('darkmode');
     burgerBarThreeEl.classList.toggle('darkmode');
+    footerP.classList.toggle('darkmode');
+    footerEl.classList.toggle('darkmode');
 });
 
 // carousel function
@@ -106,3 +109,12 @@ function navAnimation(val1, val2) {
   navItems.forEach((nav) => {
     nav.addEventListener("click", toggleNav);
   });
+
+// footer year
+footerYear = () => {
+  let currentYear = new Date().getFullYear();
+  footerP.innerHTML = `© Derek Ngan ${currentYear}`
+};
+
+footerYear();
+

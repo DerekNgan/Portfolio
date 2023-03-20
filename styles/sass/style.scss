@@ -357,8 +357,6 @@ body{
     width: fit-content;
     }
 
-
-
 .skillList{
     display: flex;
     flex-direction: row;
@@ -386,6 +384,7 @@ body{
 
     p{
         text-align: left;
+        text-transform: uppercase;
     }
 }
 
@@ -520,6 +519,7 @@ button:active, button:focus{
         margin-bottom: 20px;
         color: $light-color;
         background-color: $dark-color;
+        padding-left: 10px;
     }
 
     input::placeholder{
@@ -542,6 +542,7 @@ button:active, button:focus{
         resize: none;
         background-color: $dark-color;
         color: $light-color;
+        padding-left: 10px;
     }
 
     textarea::placeholder{
@@ -568,4 +569,25 @@ button:active, button:focus{
     a:focus{
         color: $underline-color;
     }
+}
+
+// footer
+footer{
+    padding: 10px 0 10px 0;
+    background-color: $dark-color;
+}
+
+footer.darkmode{
+    background-color: $light-color;
+}
+
+.footerP{
+    margin: 0 auto;
+    text-align: center;
+    color: $light-color;
+}
+
+.footerP.darkmode{
+    color: $dark-color;
+    background-color: $light-color;
 }
