@@ -546,7 +546,7 @@ body {
 .hamburgerMenu {
   position: fixed;
   top: 1rem;
-  right: 17%;
+  right: 10px;
   z-index: 10;
   cursor: pointer;
   background-color: #b6caa2;
@@ -557,7 +557,7 @@ body {
 }
 
 .hamburgerMenu:hover,
-.hamburgerMenu:focus {
+.hamburgerMenu:focus-visible {
   background-color: #d34714;
 }
 
