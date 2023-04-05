@@ -156,9 +156,9 @@ body{
   }
 
 .hamburgerMenu{
-    position: fixed;
+    position: absolute;
     top: 1rem;
-    right: 10px;
+    right: 20px;
     z-index: 10;
     cursor: pointer;
     background-color: $light-color;
@@ -517,6 +517,7 @@ button:active, button:focus{
 .formContainer{
     display: flex;
     flex-direction: row;
+    margin-bottom: 30px;
 
     form{
         display: flex;
